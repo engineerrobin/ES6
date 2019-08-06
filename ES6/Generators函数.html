@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function* f() {//迭代器函数最明显的区别就是"*"号
+        let i=0;
+        i++;
+        console.log(i);
+        yield;//这里的yield与return的区别是：return直接返回不再执行接下来的代码，yeild只是暂停待'next'启动
+
+        i++;
+        console.log(i);
+        yield;
+
+        i++;
+        console.log(i);
+        yield;
+    }
+    let a=f();
+    // a.next();
+    // a.next();
+    // a.next();
+    for (let i of a){//for of循环就是执行迭代器的
+        console.log(i)
+    }
+</script>

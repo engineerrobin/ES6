@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class myArray extends Array{
+        constructor(...end){
+            super(...end);
+        }
+        max(){
+            let m=this[0];
+            for (let i=0;i<this.length;i++){
+                if (m<this[i]) {
+                    m=this[i];
+                }
+            }
+            return m;
+        }
+    }
+    window.onload=function () {
+        let arr=new myArray(7,34,45,9);
+        console.log(arr.max())
+    }
+</script>

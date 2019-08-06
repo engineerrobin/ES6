@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Human{//定义一个类
+        //构造函数
+        constructor(name,sex,weight){
+            this.name=name//对象的属性
+            this.sex=sex,
+            this.weight=weight
+        }
+
+        //方法
+        eat(str){
+            console.log(this.name+"吃"+str)
+        }
+        play(skt){
+            console.log(this.name+"打"+skt)
+        }
+    }
+    //定义一个子类
+    // class Doctor extends Human {
+    //     //构造函数
+    //     constructor(name, sex, weight) {
+    //         super(name, sex, weight)//super是调用父类的构造函数,super的调用必须放在子类构造函数的第一句话
+    //     }
+    //
+    //     eat(str) {
+    //         console.log(this.name + "吃" + str)
+    //     }
+    //
+    // }
+        class worker extends Human {
+        constructor(name, sex, weight,age) {
+            super(name, sex, weight)//super是调用父类的构造函数,super的调用必须放在子类构造函数的第一句话
+            this.age = age;
+        }
+        writeCode(obj) {
+            console.log(this.name + "写"+obj+"代码")
+        }
+    }
+    //定义对象（实例化对象）
+    // var kk=new Human("景田龙","男","70KG");
+    // console.log(kk);
+    // kk.eat("面皮");
+    // kk.play("篮球")
+
+
+    // var zz=new Doctor("景田龙","男","70KG");
+    // console.log(zz);
+    // zz.eat("面皮");
+    // zz.play("篮球")
+
+
+
+    var tt=new worker("景田龙","男","70KG",18);
+    console.log(tt.age)//自己新添加的属性
+    console.log(tt.name)//父类的属性
+    tt.eat("面皮");//父类的方法
+    tt.play("篮球")//父类的方法
+    tt.writeCode("javascript")//自己新添加的方法
+</script>

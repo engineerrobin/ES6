@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // var obj={
+    //     "id":"142407",
+    //     "name":"哈哈",
+    //     "weight":"173"
+    // }
+    // var {id,name,weight}=obj;
+    // console.log(id);
+    // console.log(name);
+    // console.log(weight);
+    //以上是过渡写法，下边是“解构对象”
+
+    var {id,name,adress:{city,area}}={id:"142407",name:"景",adress:{city:"西安",area:"南窑头"}};
+    console.log(id);
+    console.log(name);
+    console.log(city);
+    console.log(area);
+</script>

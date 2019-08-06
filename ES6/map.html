@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Map中存储的是键值对，键就是唯一区分一个元素的
+    let a=new Map();
+    //给集合里添加元素或者修改元素
+    a.set('001',{id:'001',name:'张三丰',sex:'man'});
+    a.set('002',{id:'002',name:'好吧',sex:'woman'});
+
+
+    //get根据键获取值
+    // let oj=a.get('001');
+    // console.log(oj);//id: "001" name: "张三丰" sex: "man"
+
+    // let b=a.keys();//返回值是迭代器
+    // console.log(b);
+    // for (let i of b) {//迭代器的循环使用 for of
+    //     console.log(i)
+    // }
+
+    // let c=a.values();//返回值是迭代器
+    // console.log(c);
+    // for (let i of c) {//迭代器的循环使用 for of
+    //     console.log(i)
+    // }
+
+    console.log(a.size)
+</script>

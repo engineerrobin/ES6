@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    window.onload=function() {
+        var person = {
+            "id": "007",
+            "name": "流毒花"
+        };
+        console.log(typeof person);//打印出的为object,即JSON对象
+        var str = JSON.stringify(person);
+        console.log(typeof str);//打印出的为string
+        console.log(str);//`{"id":"007","name":"刘德华"}`，两边带"`"即为字符串
+        document.write(str)
+        console.log(person.id);//因为person为对象，打印出的为007
+        console.log(str.id)//因为str为字符串，所以不具有id属性，结果为"undefined"
+    }
+</script>

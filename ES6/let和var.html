@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //let 和var 的区别
+    //1 let声明的变量是块级作用域（即花括号里边的区域），var作用域是函数作用域和全局作用域
+    //注意：let是可以定义全局变量，局部变量，块级作用域的变量。
+    //2、let声明的变量不会声明提升，var会声明提升
+    //3、从代码的写法上，let不能声明同名的变量，var可以。
+    function kk(){
+        var a=100;{
+            var b=600;
+            let c=500;
+            let d=800;
+            console.log(c)
+        }
+        console.log(a)
+        console.log(b)//var 变量提升
+        console.log(c)//let声明的变量为块级作用域，所以不能打印
+    }
+    kk()
+</script>

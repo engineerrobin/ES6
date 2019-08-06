@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let k = a => a;//就等于let k=function(a){return a}
+
+    //如果箭头函数不需要参数或需要多个参数，就使用一个圆括号代表参数部分
+    let z=()=> "haha"//就等于let z=function(){return "haha"}
+    var sum=(sum1,sum2)=>sum1+sum2;//就等于let sum=function(sum1,sum2){return sum1+sum2}
+
+
+    //2、箭头函数赋给变量
+    let kk= b=>b*5;
+    console.log(kk(6));
+    //3、箭头函数的自运行
+    console.log((c=>c*5)(8));//ES3就是console.log((function (c){return c*5})(8)
+    console.log((function (c){return c*5})(8))
+</script>

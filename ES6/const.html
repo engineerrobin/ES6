@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //1 const修饰的变量是只读变量,初始化后不能再重新赋值
+    //2 const修饰的是变量代表内存，而不是引用的内存(意思就是，当变量是引用类型时，我们可以对堆内存中的
+    // 内容进行重新赋值，但不能对栈内存进行在赋值)
+    function f() {
+        const kk=100;
+       // kk=200;// Assignment to constant variable.不满足第一个原则
+        console.log(kk)
+        const zz=new Array(1,2,3);
+        zz[0]=800;//我们可以对堆内存中的内容进行重新赋值
+        zz[1]=900;//我们可以对堆内存中的内容进行重新赋值
+        zz[2]=1000;//我们可以对堆内存中的内容进行重新赋值
+        //zz=[123,45,789];//Assignment to constant variable,不能对栈内存重新进行赋值
+        console.log(zz)// [800, 900, 1000];
+    }
+    f();
+</script>

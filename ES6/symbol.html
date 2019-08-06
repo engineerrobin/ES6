@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Symbol类型的变量全宇宙唯一！
+    var s=Symbol();
+    console.log(s);
+    var a=Symbol();
+    console.log(a)
+    console.log(s===a);//false;
+
+
+    var p={};
+    var s1=Symbol();
+    var s2=Symbol();
+    p[s1]="hello";//给对象p添加属性s1
+    p[s2]="hahaha";
+
+    console.log(p[s1]);//hello
+    console.log(p[s2]);//hahaha
+</script>

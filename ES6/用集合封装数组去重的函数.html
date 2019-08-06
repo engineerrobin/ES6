@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function noRepeat(arr) {
+        let a = new Set(arr);
+        var b = [];
+        // return a;
+
+
+        for (let i of a) {
+            b.push(i);
+        }
+        return b;
+    }
+
+
+    var arr = [1,2,3,4,2,3,5];
+    console.log(noRepeat(arr));
+    console.log(arr);
+</script>

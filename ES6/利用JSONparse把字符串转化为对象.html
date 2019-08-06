@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    window.onload=function() {
+      var str=`{"id":"007","name":"刘德华"}`;
+      console.log(str.id)//str 为字符串所以没有"id"属性，打印出为undefined
+        //利用JSONparse
+        var obj=JSON.parse(str);
+      console.log(obj.id)//打印出为007
+    }
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function f(k,...end) {
+        console.log(k);
+        console.log(end);
+    }
+
+    function z(...end) {
+        console.log(end);
+    }
+    //函数z等同于下边的箭头函数t
+    let t=(...end)=>{
+        console.log(end)
+    }
+
+    f(1,2,3,4,5,6,7,8,9,0)
+    z(23,435,13,45,32,456,)
+    t(23,435,13,45,32,456,)
+</script>
